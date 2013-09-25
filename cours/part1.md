@@ -18,7 +18,7 @@ Le Javascript est un langage dit client-side, c'est-à-dire que les scripts sont
 
 C'est important, car la finalité des scripts client-side et server-side n'est pas la même. Un script server-side va s'occuper de « créer » la page Web qui sera envoyée au navigateur. Ce dernier va alors afficher la page puis exécuter les scripts client-side tel que le Javascript. Voici un schéma reprenant ce fonctionnement :
 
-![image]()
+![image](292939.png)
 
 Javascript est un langage dit client-side, c'est à dire interprété par le client (le visiteur)
 
