@@ -1,4 +1,4 @@
 idem
 ====
 
-Javascript courses and exercices
+Javascript courses and exercices (french)
