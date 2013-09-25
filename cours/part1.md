@@ -4,9 +4,23 @@
 
 ##### 1 - Qu'est ce que le javascript ?
 
-JavaScript (souvent abrégé JS) est un langage de programmation de scripts principalement utilisé dans les pages web interactives mais aussi côté serveur.
+Le Javascript est à ce jour utilisé majoritairement sur Internet, conjointement avec les pages Web (HTML ou XHTML). Le Javascript s'inclut directement dans la page Web (ou dans un fichier externe) et permet de dynamiser une page HTML, en ajoutant des interactions avec l'utilisateur, des animations, de l'aide à la navigation, comme par exemple :
 
-C'est un langage orienté objet à prototype, c'est-à-dire que les bases du langage et ses principales interfaces sont fournies par des objets qui ne sont pas des instances de classes, mais qui sont chacun équipés de constructeurs permettant de créer leurs propriétés, et notamment une propriété de prototypage qui permet d'en créer des objets héritiers personnalisés.
+Afficher/masquer du texte ;
+
+Faire défiler des images ;
+
+Créer un diaporama avec un aperçu « en grand » des images ;
+
+Créer des infobulles.
+
+Le Javascript est un langage dit client-side, c'est-à-dire que les scripts sont exécutés par le navigateur chez l'internaute (le client). Cela diffère des langages de scripts dits server-side qui sont exécutés par le serveur Web. C'est le cas des langages comme le PHP.
+
+C'est important, car la finalité des scripts client-side et server-side n'est pas la même. Un script server-side va s'occuper de « créer » la page Web qui sera envoyée au navigateur. Ce dernier va alors afficher la page puis exécuter les scripts client-side tel que le Javascript. Voici un schéma reprenant ce fonctionnement :
+
+![image]()
+
+Javascript est un langage dit client-side, c'est à dire interprété par le client (le visiteur)
 
 
 ```javascript
