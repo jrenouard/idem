@@ -1,7 +1,7 @@
 ##Partie 1 : Les bases du Javascript
 
 
-##### 1 - Qu'est ce que le javascript ?
+### Qu'est ce que le javascript ?
 
 Le Javascript est à ce jour utilisé majoritairement sur Internet, conjointement avec les pages Web (HTML ou XHTML). Le Javascript s'inclut directement dans la page Web (ou dans un fichier externe) et permet de dynamiser une page HTML, en ajoutant des interactions avec l'utilisateur, des animations, de l'aide à la navigation, comme par exemple :
 
@@ -21,7 +21,7 @@ C'est important, car la finalité des scripts client-side et server-side n'est p
 
 Javascript est un langage dit client-side, c'est à dire interprété par le client (le visiteur)
 
-##### 2 - Le Hello World!
+###Le Hello World!
 
 Comme dans tout bon tutoriel nous allons commencer par afficher le classique 'Hello World!'
 
@@ -40,7 +40,7 @@ console.log('Hello World!');
 Mise en pratique, à partir du [code source](part1.html) fournis, essayez les 2 méthodes.
 
 
-##### 3 - La syntaxe
+### La syntaxe
 
 La syntaxe du Javascript n'est pas compliquée. De manière générale, les instructions doivent être séparées par un point-virgule que l'on place à la fin de chaque instruction :
 
@@ -50,7 +50,7 @@ instruction_2;
 instruction_3;
 ```
 
-###### La compression des scripts
+##### La compression des scripts
 
 Certains scripts sont disponibles sous une forme dite compressée, c'est-à-dire que tout le code est écrit à la suite, sans retours à la ligne.
 
@@ -61,7 +61,7 @@ Mais si vous avez oublié un seul point-virgule, votre code compressé ne foncti
 
 C'est aussi une des raisons qui fait qu'il faut toujours mettre les points-virgules en fin d'instruction.
 
-######Les espaces
+#####Les espaces
 
 Le Javascript n'est pas sensible aux espaces.
 Cela veut dire que vous pouvez aligner des instructions comme vous le voulez, sans que cela ne gêne en rien l'exécution du script.
@@ -115,49 +115,46 @@ elem.style.display = 'block';
 ```
 La présentation des codes est importante aussi, un peu comme si vous rédigiez une lettre : ça ne se fait pas n'importe comment. Il n'y a pas de règles prédéfinies comme pour l'écriture des lettres, donc il faudra vous arranger pour organiser votre code de façon claire. Dans le code indenté donné précédemment, vous pouvez voir qu'il y a des espaces un peu partout pour aérer le code et qu'il y a une seule instruction par ligne (à l'exception des if else, mais nous verrons cela plus tard). Certains développeurs écrivent leur code comme ça :
 
-1
-2
-3
-4
-5
-6
+```javascript
 function toggle(elemID){
     var elem=document.getElementById(elemID);   
     if(elem.style.display=='block'){
         elem.style.display='none';  
     }else{elem.style.display='block';}
 }
-Vous conviendrez comme nous que c'est tout de suite moins lisible non ? Gardez à l'esprit que votre code doit être propre, même si vous êtes le seul à y toucher : vous pouvez laisser le code de côté quelques temps et le reprendre par la suite, et là, bonne chance pour vous y retrouver.
+```
 
-Les commentaires
+Vous conviendrez que c'est tout de suite moins lisible non ? 
+
+Gardez à l'esprit que votre code doit être propre, même si vous êtes le seul à y toucher : vous pouvez laisser le code de côté quelques temps et le reprendre par la suite, et là, bonne chance pour vous y retrouver.
+
+######Les commentaires
 
 Les commentaires sont des annotations faites par le développeur pour expliquer le fonctionnement d'un script, d'une instruction ou même d'un groupe d'instructions. Les commentaires ne gênent pas l'exécution d'un script.
 
-Il existe deux types de commentaires : les commentaires de fin de ligne, et les commentaires multilignes.
+Il existe deux types de commentaires : les commentaires, et les commentaires multilignes.
 
-Commentaires de fin de ligne
+######Commentaires
 
 Ils servent à commenter une instruction. Un tel commentaire commence par deux slashs :
 
-1
-2
-3
-4
+```javascript
 instruction_1; // Ceci est ma première instruction
 instruction_2;
 // La troisième instruction ci-dessous :
 instruction_3;
+```
+
 Le texte placé dans un commentaire est ignoré lors de l'exécution du script, ce qui veut dire que vous pouvez mettre ce que bon vous semble en commentaire, même une instruction (qui ne sera évidemment pas exécutée) :
 
-1
-2
-3
-4
+```javascript
 instruction_1; // Ceci est ma première instruction
 instruction_2;
 // La troisième instruction ci-dessous pose problème, je l'annule temporairement
 // instruction_3;
-Commentaires multilignes
+```
+
+######Commentaires multilignes
 
 Ce type de commentaires permet les retours à la ligne. Un commentaire multiligne commence par /* et se termine par */ :
 
@@ -171,35 +168,10 @@ instruction_1;
 instruction_2;
 instruction_3; // Fin du script
 ```
+
 Remarquez qu'un commentaire multiligne peut aussi être affiché sur une seule ligne :
 
-1
-2
+```javascript
 instruction_1; /* Ceci est ma première instruction */
 instruction_2;
-Les fonctions
-
-Dans l'exemple du Hello world!, nous avons utilisé la fonction alert(). Nous reviendrons en détail sur le fonctionnement des fonctions, mais pour les chapitres suivants, il sera nécessaire de connaître sommairement leur syntaxe.
-
-Une fonction se compose de deux choses : son nom, suivi d'un couple de parenthèses (une ouvrante et une fermante) :
-
-1
-myFunction(); // « function » veut dire « fonction » en anglais
-Entre les parenthèses se trouvent les arguments, que l'on appelle aussi paramètres. Ceux-ci contiennent des valeurs qui sont transmises à la fonction. Dans le cas du Hello world!, ce sont les mots « Hello world! » qui sont passés en paramètre :
-
-1
-alert('Hello world!');
-	
-##### 2 - Variables
-
-Déclaration de variable
-
-```javascript
-var firtsname = 'Homer';
-```
-
-##### 3 - Tableaux
-
-```javascript
-var family = new Array('Homer', 'Marge', 'Bart', 'Lisa', 'Maggie');
 ```
