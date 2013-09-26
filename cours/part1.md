@@ -194,11 +194,11 @@ instruction_2;
 
 ### Où placer le code dans la page
 
-Les codes Javascript sont insérés au moyen de l'élément <script>. Cet élément possède un attribut type qui sert à indiquer le type de langage que l'on va utiliser.
+Les codes Javascript sont insérés au moyen de l'élément ```<script>```. Cet élément possède un attribut type qui sert à indiquer le type de langage que l'on va utiliser.
 
 ####Le Javascript « dans la page »
 
-Pour placer du code Javascript directement dans votre page Web, rien de plus simple, on fait comme dans l'exemple du Hello world! : on place le code au sein de l'élément <script> :
+Pour placer du code Javascript directement dans votre page Web, rien de plus simple, on fait comme dans l'exemple du Hello world! : on place le code au sein de l'élément ```<script>``` :
 
 ```html
 <!DOCTYPE html>
