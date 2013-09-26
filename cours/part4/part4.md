@@ -173,7 +173,7 @@ for (var i = 0, nicks = '', nick; true; i++) {
 }
  
 alert('Il y a ' + i + ' prénoms :\n\n' + nicks);
-```javascript
+```
 
 La variable de boucle a été ajoutée dans le bloc d'initialisation. Le bloc d'incrémentation a lui aussi été modifié : on indique qu'il faut incrémenter la variable de boucle i. Ainsi, à chaque passage dans la boucle, i est incrémentée, ce qui va nous permettre de compter assez facilement le nombre de prénoms ajoutés.
 
