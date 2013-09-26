@@ -237,3 +237,115 @@ Ce code a exactement le même effet que le précédent mais est plus rapide à �
 * /=
 
 * %=
+
+
+#### Concaténation et conversion des types
+
+Certains opérateurs ont des particularités cachées. Prenons l'opérateur + ; en plus de faire des additions, il permet de faire ce que l'on appelle des concaténations entre des chaînes de caractères.
+
+#### La concaténation
+
+Une concaténation consiste à ajouter une chaîne de caractères à la fin d'une autre, comme dans cet exemple :
+
+```javascript
+var hi = 'Bonjour', name = 'toi', result;
+result = hi + name;
+alert(result); // Affiche : « Bonjourtoi »
+```
+
+Cet exemple va afficher la phrase « Bonjourtoi ». Vous remarquerez qu'il n'y a pas d'espace entre les deux mots, en effet, la concaténation respecte ce que vous avez écrit dans les variables à la lettre près. Si vous voulez un espace, il vous faut en ajouter un à l'une des variables, comme ceci : var hi = 'Bonjour ';
+
+Autre chose, vous souvenez-vous toujours de l'addition suivante ?
+
+```javascript
+var number = 3;
+number += 5;
+```
+
+Eh bien vous pouvez faire la même chose avec les chaînes de caractères :
+
+```javascript
+var text = 'Bonjour ';
+text += 'toi';
+alert(text); // Affiche « Bonjour toi ».
+```
+
+#### Interagir avec l'utilisateur
+
+La concaténation est le bon moment pour introduire votre toute première interaction avec l'utilisateur grâce à la fonction prompt(). Voici comment l'utiliser :
+
+```javascript
+var userName = prompt('Entrez votre prénom :');
+alert(userName); // Affiche le prénom entré par l'utilisateur
+```
+
+#### Mise en pratique
+Récupérer le prénom de l'utilisateur en utilisant la fonction prompt et afficher "Bonjour PRENOM, comment allez vous ?"
+
+
+#### Convertir une chaîne de caractères en nombre
+
+Essayons maintenant de faire une addition avec des nombres fournis par l'utilisateur :
+
+```javascript
+var first, second, result;
+ 
+first  = prompt('Entrez le premier chiffre :');
+second = prompt('Entrez le second chiffre :');
+result = first + second;
+ 
+alert(result);
+```
+
+Problème, tout ce qui est écrit dans le champ de texte de prompt() est récupéré sous forme d'une chaîne de caractères, que ce soit un chiffre ou non. Du coup, si vous utilisez l'opérateur +, vous ne ferez pas une addition mais une concaténation !
+
+C'est là que la conversion des types intervient. 
+
+Le concept est simple : il suffit de convertir la chaîne de caractères en nombre. 
+Pour cela, vous allez avoir besoin de la fonction parseInt() qui s'utilise de cette manière :
+
+```javascript
+var text = '1337', number;
+ 
+number = parseInt(text);
+alert(typeof number); // Affiche : « number »
+alert(number); // Affiche : « 1337 »
+```
+
+#### Mise en pratique
+Adaptez le code ci-dessus pour que l'addition fonctionne
+
+#### Convertir un nombre en chaîne de caractères
+
+Nous allons voir comment convertir un nombre en chaîne de caractères. Il est déjà possible de concaténer un nombre et une chaîne sans conversion, mais pas deux nombres, car ceux-ci s'ajouteraient à cause de l'emploi du +.
+
+D'où le besoin de convertir un nombre en chaîne. Voici comment faire :
+
+```javascript
+var text, number1 = 4, number2 = 2;
+text = number1 + '' + number2;
+alert(text); // Affiche : « 42 »
+```
+
+Qu'avons-nous fait ? Nous avons juste ajouté une chaîne de caractères vide entre les deux nombres, ce qui aura eu pour effet de les convertir en chaînes de caractères.
+
+
+
+#### En résumé
+
+* Une variable est un moyen pour stocker une valeur.
+
+* On utilise le mot clé var pour déclarer une variable, et on utilise = pour affecter une valeur à la variable.
+
+* Les variables sont typées dynamiquement, ce qui veut dire que l'on n'a pas besoin de spécifier le type de contenu que la variable va contenir.
+
+* Grâce à différents opérateurs, on peut faire des opérations entre les variables.
+
+* L'opérateur + permet de concaténer des chaînes de caractères, c'est-à-dire de les mettre bout à bout.
+
+* La fonction prompt() permet d'interagir avec l'utilisateur.
+
+
+#### Mise en pratique
+Nous voulons récupérer les noms, prénoms, taille et poids d'un utilisateur afin de calculer son IMC (voir la formule ici http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle) et d'afficher:
+"Bonjour PRENOM NOM, votre IMC est de IMC"
