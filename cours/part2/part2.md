@@ -156,4 +156,4 @@ Voilà un type de variable très important !
 Si l'instruction typeof vous renvoie undefined, c'est soit que votre variable est inexistante, soit qu'elle est déclarée mais ne contient rien.
 
 ####Mise en pratique 
-Déclarez 3 variables de types différents (int/string/boolean) et à l'aide de la fonction ```console.log()``` affichez leur contenu et leur type.
+Déclarez 3 variables de type différents (int/string/boolean) et à l'aide de la fonction ```console.log()``` affichez leur contenu et leur type.
