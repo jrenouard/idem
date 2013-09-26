@@ -382,3 +382,7 @@ Voilà tout pour les valeurs de retour. Leur utilisation est bien plus simple qu
 
 ###Mise en pratique
 Ecrire une fonction pour convertir des degrés Celsius en Fahrenheit
+
+Ecrire une fonction qui renverse une chaine
+
+ex: machaine -> eniahcam
