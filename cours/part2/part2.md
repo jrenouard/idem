@@ -134,14 +134,10 @@ Il se peut que vous ayez un jour ou l'autre besoin de tester l'existence d'une v
 ```javascript
 var number = 2;
 alert(typeof number); // Affiche : « number »
-```
- 
-```javascript
+
 var text = 'Mon texte';
 alert(typeof text); // Affiche : « string »
-```
 
-```javascript 
 var aBoolean = false;
 alert(typeof aBoolean); // Affiche : « boolean »
 ```
@@ -157,3 +153,87 @@ Si l'instruction typeof vous renvoie undefined, c'est soit que votre variable es
 
 ####Mise en pratique 
 Déclarez 3 variables de type différents (int/string/boolean) et à l'aide de la fonction ```console.log()``` affichez leur contenu et leur type.
+
+
+
+###Les opérateurs arithmétiques
+
+Ces derniers sont à la base de tout calcul et sont au nombre de cinq.
+
+| Opérateur     | Signe  |
+| ------------- |:------:|
+| addition      | +      | 
+| soustraction  | -      |
+| multiplication| *      |
+| division      | /      |
+| modulo        | %      |
+
+
+Concernant le dernier opérateur, le modulo est tout simplement le reste d'une division. 
+Par exemple, si vous divisez 5 par 2 alors il vous reste 1 ; c'est le modulo !
+
+
+####Quelques calculs simples
+
+Faire des calculs en programmation est quasiment tout aussi simple que sur une calculatrice, exemple :
+
+```javascript
+var result = 3 + 2;
+alert(result); // Affiche : « 5 »
+```
+
+Alors vous savez faire des calculs avec deux nombres c'est bien, mais avec deux variables contenant elles-mêmes des nombres c'est mieux :
+
+```javascript
+var number1 = 3, number2 = 2, result;
+result = number1 * number2;
+alert(result); // Affiche : « 6 »
+```
+
+On peut aller encore plus loin comme ça en écrivant des calculs impliquant plusieurs opérateurs ainsi que des variables :
+
+```javascript
+var divisor = 3, result1, result2, result3;
+ 
+result1 = (16 + 8) / 2 - 2 ; // 10
+result2 = result1 / divisor;
+result3 = result1 % divisor;
+ 
+alert(result2); // Résultat de la division : 3,33
+alert(result3); // Reste de la division : 1
+```
+
+Vous remarquerez que nous avons utilisé des parenthèses pour le calcul de la variable result1.
+Elles s'utilisent comme en maths : grâce à elles le navigateur calcule d'abord 16 + 8 puis divise le résultat par 2.
+
+#####Simplifier encore plus vos calculs
+
+Par moment vous aurez besoin d'écrire des choses de ce genre :
+
+```javascript
+var number = 3;
+number = number + 5;
+alert(number); // Affiche : « 8 »
+```
+
+Ce n'est pas spécialement long ou compliqué à faire, mais cela peut devenir très vite rébarbatif, il existe donc une solution plus simple pour ajouter un nombre à une variable :
+
+```javascript
+var number = 3;
+number += 5;
+alert(number); // Affiche : « 8 »
+```
+
+Ce code a exactement le même effet que le précédent mais est plus rapide à écrire.
+
+À noter que ceci ne s'applique pas uniquement aux additions mais fonctionne avec tous les autres opérateurs arithmétiques :
+
+* +=
+
+* -=
+
+* *=
+
+* /=
+
+* %=
