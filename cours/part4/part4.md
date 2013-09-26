@@ -197,13 +197,18 @@ La boucle for est très utilisée en Javascript, bien plus que la boucle while, 
 ####Mise en pratique
 #####Exercice 1
 Ecrivez un script qui va demander à l'utilisateur le nombre de lignes souhaitées et créer une pyramide de *
-ex: "Combien de lignes ?" -> 5
+
+ex: ```"Combien de lignes ?"``` -> 5
+
 resultat:
+```
 *
 **
 ***
 ****
 *****
+```
+
 
 ######Exercice 2 - FizzBuzz
 Ecrire un script qui affiche les entiers de 1 à 100. Mais pour les multiples de 3, afficher "Fizz" au lieu du nombre et pour les multiples de 5, afficher "Buzz". Pour les nombres qui sont à la fois multiple de 3 et 5, afficher "FizzBuzz"
