@@ -195,7 +195,7 @@ La boucle for est très utilisée en Javascript, bien plus que la boucle while, 
 
 
 ####Mise en pratique
-#####Exercice 1
+######Exercice 1
 Ecrivez un script qui va demander à l'utilisateur le nombre de lignes souhaitées et créer une pyramide de *
 
 ex: ```"Combien de lignes ?"``` -> 5
