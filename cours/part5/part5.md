@@ -381,7 +381,12 @@ Voilà tout pour les valeurs de retour. Leur utilisation est bien plus simple qu
 
 
 ###Mise en pratique
+
+#####Exercice 1
+
 Ecrire une fonction pour convertir des degrés Celsius en Fahrenheit
+
+#####Exercice 2
 
 Ecrire une fonction qui renverse une chaine
 
