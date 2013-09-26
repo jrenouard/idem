@@ -269,3 +269,126 @@ if (floor == 0) {
 
 ####Mise en pratique
 Toujours sur l'exercice IMC, ajouter un affichage ```Bravo, votre IMC est idéal``` si l'IMC n'est ni inférieur à 18.5 ni supérieur à 25
+
+
+###La condition « switch »
+
+Nous venons d'étudier le fonctionnement de la condition if else qui est très utile dans de nombreux cas, toutefois elle n'est pas très pratique pour faire du cas par cas ; c'est là qu'intervient switch !
+
+Prenons un exemple : nous avons un meuble avec quatre tiroirs contenant chacun des objets différents, et il faut que l'utilisateur puisse connaître le contenu du tiroir dont il entre le chiffre.
+
+Si nous voulions le faire avec if else ce serait assez long et fastidieux :
+
+
+```javascript
+var drawer = parseInt(prompt('Choisissez le tiroir à ouvrir (1 à 4) :'));
+ 
+if (drawer == 1) {
+ 
+    alert('Contient divers outils pour dessiner : du papier, des crayons, etc.');
+ 
+} else if (drawer == 2) {
+ 
+    alert('Contient du matériel informatique : des câbles, des composants, etc.');
+ 
+} else if (drawer == 3) {
+ 
+    alert('Ah ? Ce tiroir est fermé à clé ! Dommage !');
+ 
+} else if (drawer == 4) {
+ 
+    alert('Contient des vêtements : des chemises, des pantalons, etc.');
+ 
+} else {
+ 
+    alert("Info du jour : le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas.");
+ 
+}
+```
+
+C'est long, non ? Et en plus ce n'est pas très adapté à ce que l'on souhaite faire. Le plus gros problème est de devoir réécrire à chaque fois la condition ; mais avec switch c'est un peu plus facile :
+
+```javascript
+var drawer = parseInt(prompt('Choisissez le tiroir à ouvrir (1 à 4) :'));
+ 
+switch (drawer) {
+    case 1:
+        alert('Contient divers outils pour dessiner : du papier, des crayons, etc.');
+    break;
+ 
+    case 2:
+        alert('Contient du matériel informatique : des câbles, des composants, etc.');
+    break;
+ 
+    case 3:
+        alert('Ah ? Ce tiroir est fermé à clé ! Dommage !');
+    break;
+ 
+    case 4:
+        alert('Contient des vêtements : des chemises, des pantalons, etc.');
+    break;
+ 
+    default:
+        alert("Info du jour : le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas.");
+}
+```
+
+Comme vous pouvez le constater, le code n'est pas spécialement plus court mais il est déjà mieux organisé et donc plus compréhensible. Détaillons maintenant son fonctionnement :
+
+* On écrit le mot-clé switch suivi de la variable à analyser entre parenthèses et d'une paire d'accolades ;
+
+* Dans les accolades se trouvent tous les cas de figure pour notre variable, définis par le mot-clé case suivi de la valeur qu'il doit prendre en compte (cela peut être un nombre mais aussi du texte) et de deux points ;
+
+* Tout ce qui suit les deux points d'un case sera exécuté si la variable analysée par le switch contient la valeur du case ;
+
+* À chaque fin d'un case on écrit l'instruction break pour « casser » le switch et ainsi éviter d'exécuter le reste du code qu'il contient ;
+
+* Et enfin on écrit le mot-clé default suivi de deux points. Le code qui suit cette instruction sera exécuté si aucun des cas précédents n'a été exécuté. Attention, cette partie est optionnelle, vous n'êtes pas obligés de l'intégrer à votre code.
+
+Dans l'ensemble, vous n'aurez pas de mal à comprendre le fonctionnement du switch, en revanche l'instruction break vous posera peut-être problème, je vous invite donc à essayer le code sans cette instruction.
+
+Vous commencez à comprendre le problème ? Sans l'instruction break vous exécutez tout le code contenu dans le switch à partir du case que vous avez choisi. Ainsi, si vous choisissez le tiroir n°2 c'est comme si vous exécutiez ce code :
+
+```javascript
+alert('Contient du matériel informatique : des câbles, des composants, etc.');
+alert('Ah ? Ce tiroir est fermé à clé ! Dommage !');
+alert('Contient des vêtements : des chemises, des pantalons, etc.');
+alert("Info du jour : le meuble ne contient que 4 tiroirs et, jusqu'à preuve du contraire, les tiroirs négatifs n'existent pas.");
+```
+
+Dans certains cas, ce système peut être pratique mais cela reste extrêmement rare.
+
+Avant de clore cette partie, il est nécessaire de vous faire comprendre un point essentiel : un switch permet de faire une action en fonction d'une valeur mais aussi en fonction du type de la valeur (comme l'opérateur ===), ce qui veut dire que ce code n'affichera jamais « Bravo ! » :
+
+```javascript
+var drawer = prompt('Entrez la valeur 1 :');
+ 
+switch (drawer) {
+    case 1:
+        alert('Bravo !');
+    break;
+ 
+    default:
+        alert('Perdu !');
+}
+```
+
+En effet, nous avons retiré la fonction parseInt() de notre code, ce qui veut dire que nous passons une chaîne de caractères à notre switch. Puisque ce dernier vérifie aussi les types des valeurs, le message « Bravo ! » ne sera jamais affiché.
+
+En revanche, si nous modifions notre premier case pour vérifier une chaîne de caractères plutôt qu'un nombre alors nous n'avons aucun problème :
+
+```javascript
+var drawer = prompt('Entrez la valeur 1 :');
+ 
+switch (drawer) {
+    case '1':
+        alert('Bravo !');
+    break;
+ 
+    default:
+        alert('Perdu !');
+}
+```
+
+####Mise en pratique
+Sachant que le code suivant ```var day=new Date().getDay();``` renvoie un entier entre 0 et 7, utilisez un switch pour afficher le jour de la semaine correspondant.
