@@ -1,11 +1,8 @@
-##Partie 2 : Le langage Javascript
-
-
-### Les variables
+##Partie 2 : Les variables
 
 Pour faire simple, une variable est un espace de stockage sur votre ordinateur permettant d'enregistrer tout type de donnée, que ce soit une chaîne de caractères, une valeur numérique ou bien des structures un peu plus particulières.
 
-####Déclarer une variable
+###Déclarer une variable
 
 Tout d'abord, qu'est-ce que « déclarer une variable » veut dire ? 
 Il s'agit tout simplement de lui réserver un espace de stockage en mémoire, rien de plus. Une fois la variable déclarée, vous pouvez commencer à y stocker des données sans problème.
@@ -64,7 +61,7 @@ myVariable1 = myVariable2 = 2;
 Les deux variables contiennent maintenant le même nombre : 2 ! 
 Vous pouvez faire la même chose avec autant de variables que vous le souhaitez.
 
-####Les types de variables
+###Les types de variables
 
 Contrairement à de nombreux langages, le Javascript est un langage typé dynamiquement. Cela veut dire, généralement, que toute déclaration de variable se fait avec le mot-clé var sans distinction du contenu, tandis que dans d'autres langages, comme le C, il est nécessaire de préciser quel type de contenu la variable va devoir contenir.
 
@@ -173,7 +170,7 @@ Concernant le dernier opérateur, le modulo est tout simplement le reste d'une d
 Par exemple, si vous divisez 5 par 2 alors il vous reste 1 ; c'est le modulo !
 
 
-####Quelques calculs simples
+###Quelques calculs simples
 
 Faire des calculs en programmation est quasiment tout aussi simple que sur une calculatrice, exemple :
 
@@ -206,7 +203,7 @@ alert(result3); // Reste de la division : 1
 Vous remarquerez que nous avons utilisé des parenthèses pour le calcul de la variable result1.
 Elles s'utilisent comme en maths : grâce à elles le navigateur calcule d'abord 16 + 8 puis divise le résultat par 2.
 
-#####Simplifier encore plus vos calculs
+####Simplifier encore plus vos calculs
 
 Par moment vous aurez besoin d'écrire des choses de ce genre :
 
@@ -239,7 +236,7 @@ Ce code a exactement le même effet que le précédent mais est plus rapide à �
 * %=
 
 
-#### Concaténation et conversion des types
+### Concaténation et conversion des types
 
 Certains opérateurs ont des particularités cachées. Prenons l'opérateur + ; en plus de faire des additions, il permet de faire ce que l'on appelle des concaténations entre des chaînes de caractères.
 
@@ -283,7 +280,7 @@ alert(userName); // Affiche le prénom entré par l'utilisateur
 Récupérer le prénom de l'utilisateur en utilisant la fonction prompt et afficher "Bonjour PRENOM, comment allez vous ?"
 
 
-#### Convertir une chaîne de caractères en nombre
+### Convertir une chaîne de caractères en nombre
 
 Essayons maintenant de faire une addition avec des nombres fournis par l'utilisateur :
 
@@ -315,7 +312,7 @@ alert(number); // Affiche : « 1337 »
 #### Mise en pratique
 Adaptez le code ci-dessus pour que l'addition fonctionne
 
-#### Convertir un nombre en chaîne de caractères
+### Convertir un nombre en chaîne de caractères
 
 Nous allons voir comment convertir un nombre en chaîne de caractères. Il est déjà possible de concaténer un nombre et une chaîne sans conversion, mais pas deux nombres, car ceux-ci s'ajouteraient à cause de l'emploi du +.
 
@@ -331,7 +328,7 @@ Qu'avons-nous fait ? Nous avons juste ajouté une chaîne de caractères vide en
 
 
 
-#### En résumé
+### En résumé
 
 * Une variable est un moyen pour stocker une valeur.
 
