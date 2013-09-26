@@ -198,7 +198,7 @@ Les codes Javascript sont insérés au moyen de l'élément ```<script>```. Cet 
 
 ####Le Javascript « dans la page »
 
-Pour placer du code Javascript directement dans votre page Web, rien de plus simple, on fait comme dans l'exemple du Hello world! : on place le code au sein de l'élément ```<script>``` :
+Pour placer du code Javascript directement dans votre page Web, rien de plus simple, on fait comme dans l'exemple du Hello world! : on place le code au sein de l'élément ```<script>`` :
 
 ```html
 <!DOCTYPE html>
@@ -219,4 +219,31 @@ Pour placer du code Javascript directement dans votre page Web, rien de plus sim
 </html>
 ```
 
+####Le Javascript externe
 
+Il est possible, et même conseillé, d'écrire le code Javascript dans un fichier externe, portant l'extension .js. 
+
+Ce fichier est ensuite appelé depuis la page Web au moyen de l'élément ```<script>``` et de son attribut src qui contient l'URL du fichier .js. 
+
+Voici tout de suite un petit exemple :
+
+```javascript
+alert('Hello world!');
+```
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+  </head>
+ 
+  <body>
+ 
+    <script src="hello.js"></script>
+ 
+  </body>
+</html>
+```
+
+On suppose ici que le fichier hello.js se trouve dans le même répertoire que la page Web.
