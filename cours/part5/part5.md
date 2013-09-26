@@ -307,24 +307,15 @@ function prompt2(text, allowCancel) {
 
 L'argument text est évidemment obligatoire vu qu'il existe une multitude de possibilités. En revanche, l'argument allowCancel est un booléen, il n'y a donc que deux possibilités :
 
-À true, l'utilisateur peut fermer la fenêtre sans entrer de texte ;
+* À true, l'utilisateur peut fermer la fenêtre sans entrer de texte ;
 
-À false, l'utilisateur est obligé d'écrire quelque chose avant de pouvoir fermer la fenêtre.
+* À false, l'utilisateur est obligé d'écrire quelque chose avant de pouvoir fermer la fenêtre.
 
 Comme la plupart des développeurs souhaitent généralement que l'utilisateur entre une valeur, on peut considérer que la valeur la plus utilisée sera false.
 
-Et c'est là que l'argument facultatif entre en scène ! Un argument facultatif est évidemment facultatif (eh oui ! Smiley ) mais doit généralement posséder une valeur par défaut dans le cas où l'argument n'a pas été rempli, dans notre cas ce sera false. Ainsi, on peut donc améliorer notre fonction de la façon suivante :
+Et c'est là que l'argument facultatif entre en scène ! Un argument facultatif est évidemment facultatif (eh oui !) mais doit généralement posséder une valeur par défaut dans le cas où l'argument n'a pas été rempli, dans notre cas ce sera false. Ainsi, on peut donc améliorer notre fonction de la façon suivante :
 
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+```javascript
 function prompt2(text, allowCancel) {
  
     if (typeof allowCancel === 'undefined') { // Souvenez-vous de typeof, pour vérifier le type d'une variable
@@ -335,52 +326,52 @@ function prompt2(text, allowCancel) {
 }
  
 prompt2('Entrez quelque chose :'); // On exécute la fonction seulement avec le premier argument, pas besoin du deuxième
+```
+
 De cette façon, si l'argument n'a pas été spécifié pour la variable allowCancel (comme dans cet exemple) on attribue alors la valeur false à cette dernière. Bien sûr, les arguments facultatifs ne possèdent pas obligatoirement une valeur par défaut, mais au moins vous saurez comment faire si vous en avez besoin.
 
 Petit piège à éviter : inversons le positionnement des arguments de notre fonction. Le second argument passe en premier et vice-versa. On se retrouve ainsi avec l'argument facultatif en premier et celui obligatoire en second, la première ligne de notre code est donc modifiée de cette façon :
 
-1
+```javascript
 function prompt2(allowCancel, text) {
+```
+
 Imaginons maintenant que l'utilisateur de votre fonction ne souhaite remplir que l'argument obligatoire, il va donc écrire ceci :
 
-1
+```javascript
 prompt2('Le texte');
+```
+
 Oui, mais le problème c'est qu'au final son texte va se retrouver dans la variable allowCancel au lieu de la variable text !
 
 Alors quelle solution existe-t-il donc pour résoudre ce problème ? Aucune ! Vous devez impérativement mettre les arguments facultatifs de votre fonction en dernière position, vous n'avez pas le choix.
 
-Les valeurs de retour
+####Les valeurs de retour
 
 Comme leur nom l'indique, nous allons parler ici des valeurs que l'on peut retourner avec une fonction. Souvenez-vous pour les fonctions prompt(), confirm() et parseInt(), chacune d'entre elles renvoyait une valeur que l'on stockait généralement dans une variable. Nous allons donc apprendre à faire exactement la même chose ici mais pour nos propres fonctions.
 
-Il est tout d'abord important de préciser que les fonctions ne peuvent retourner qu'une seule et unique valeur chacune, pas plus ! Il est possible de contourner légèrement le problème en renvoyant un tableau ou un objet, mais vous étudierez le fonctionnement de ces deux éléments dans les chapitres suivants, nous n'allons pas nous y attarder dans l'immédiat.
+Il est tout d'abord important de préciser que les fonctions ne peuvent retourner qu'une seule et unique valeur chacune, pas plus !
 Pour faire retourner une valeur à notre fonction, rien de plus simple, il suffit d'utiliser l'instruction return suivie de la valeur à retourner. Exemple :
 
-1
-2
-3
-4
-5
+```javascript
 function sayHello() {
     return 'Bonjour !'; // L'instruction « return » suivie d'une valeur, cette dernière est donc renvoyée par la fonction
 }
+
  
 alert(sayHello()); // Ici on affiche la valeur retournée par la fonction sayHello()
+```javascript
+
 Maintenant essayons d'ajouter une ligne de code après la ligne contenant notre return :
 
-1
-2
-3
-4
-5
-6
+```javascript
 function sayHello() {
     return 'Bonjour !';
     alert('Attention ! Le texte arrive !');
 }
  
 alert(sayHello());
-Essayer !
+```
 
 Comme vous pouvez le constater, notre premier alert() ne s'est pas affiché ! Cela s'explique par la présence du return : cette instruction met fin à la fonction, puis retourne la valeur. Pour ceux qui n'ont pas compris, la fin d'une fonction est tout simplement l'arrêt de la fonction à un point donné (dans notre cas, à la ligne du return) avec, éventuellement, le renvoi d'une valeur.
 
