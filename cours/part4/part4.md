@@ -1,4 +1,4 @@
-##Partie 3 : Les boucles
+##Partie 4 : Les boucles
 
 ###La boucle while
 
