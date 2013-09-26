@@ -392,3 +392,73 @@ switch (drawer) {
 
 ####Mise en pratique
 Sachant que le code suivant ```var day=new Date().getDay();``` renvoie un entier entre 0 et 7, utilisez un switch pour afficher le jour de la semaine correspondant.
+
+
+###Les conditions sur les variables
+
+Le Javascript est un langage assez particulier dans sa syntaxe, vous vous en rendrez compte par la suite si vous connaissez déjà un autre langage plus « conventionnel ». Le cas particulier que nous allons étudier ici concerne le test des variables : il est possible de tester si une variable possède une valeur sans même utiliser l'instruction typeof !
+
+####Tester l'existence de contenu d'une variable
+
+Pour tester l'existence de contenu d'une variable, il faut tout d'abord savoir que tout se joue au niveau de la conversion des types. Vous savez que les variables peuvent être de plusieurs types : les nombres, les chaînes de caractères, etc. Eh bien ici nous allons découvrir que le type d'une variable (quel qu'il soit) peut être converti en booléen même si à la base on possède un nombre ou une chaîne de caractères.
+
+Voici un exemple simple :
+
+```javascript
+var conditionTest = 'Fonctionnera ? Fonctionnera pas ?';
+ 
+if (conditionTest) {
+    alert('Fonctionne !');
+} else {
+    alert('Ne fonctionne pas !');
+}
+```
+
+Le code nous affiche le texte « Fonctionne ! ». Pourquoi ? Tout simplement parce que la variable conditionTest a été convertie en booléen et que son contenu est évalué comme étant vrai (true).
+
+Qu'est-ce qu'un contenu vrai ou faux ? Eh bien, il suffit simplement de lister les contenus faux pour le savoir : un nombre qui vaut zéro ou bien une chaîne de caractères vide. C'est tout, ces deux cas sont les seuls à être évalués comme étant à false.
+
+Bien entendu, la valeur undefined est aussi évaluée à false.
+
+####Le cas de l'opérateur OU
+
+Encore un cas à part : l'opérateur OU ! Celui-ci, en plus de sa fonction principale, permet de renvoyer la première variable possédant une valeur évaluée à true
+
+Exemple :
+
+```javascript
+var conditionTest1 = '', conditionTest2 = 'Une chaîne de caractères';
+ 
+alert(conditionTest1 || conditionTest2);
+```
+
+Au final, ce code nous retourne la valeur « Une chaîne de caractères ». Pourquoi ? Eh bien parce que l'opérateur OU va se charger de retourner la valeur de la première variable dont le contenu est évalué à true.
+
+####Mise en pratique
+ Vous devez fournir un commentaire sur quatre tranches d'âge différentes qui sont les suivantes :
+
+| Tranche d'âge | Exemple de commentaire                            |
+|---------------|---------------------------------------------------|
+| 1 à 17 ans    | « Vous n'êtes pas encore majeur. »                |
+| 18 à 49 ans   | « Vous êtes majeur mais pas encore senior. »      |
+| 50 à 59 ans   | « Vous êtes senior mais pas encore retraité. »    |
+| 60 à 120 ans  | « Vous êtes retraité, profitez de votre temps libre ! » |
+
+Le déroulement du code sera le suivant :
+
+* L'utilisateur charge la page Web ;
+
+* Il est ensuite invité à taper son âge dans une fenêtre d'interaction ;
+
+* Une fois l'âge fourni l'utilisateur obtient un petit commentaire.
+
+###En résumé
+
+* Une condition retourne une valeur booléenne : true ou false.
+
+* De nombreux opérateurs existent afin de tester des conditions et ils peuvent être combinés entre eux.
+
+* La condition if else est la plus utilisée et permet de combiner les conditions.
+
+* Quand il s'agit de tester une égalité entre une multitude de valeurs, la condition switch est préférable.
+
