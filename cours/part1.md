@@ -57,7 +57,7 @@ instruction_3;
 ```
 
 
-##### La compression des scripts
+#### La compression des scripts
 
 Certains scripts sont disponibles sous une forme dite compressée, c'est-à-dire que tout le code est écrit à la suite, sans retours à la ligne.
 
@@ -70,7 +70,7 @@ C'est aussi une des raisons qui fait qu'il faut toujours mettre les points-virgu
 
 
 
-#####Les espaces
+####Les espaces
 
 Le Javascript n'est pas sensible aux espaces.
 Cela veut dire que vous pouvez aligner des instructions comme vous le voulez, sans que cela ne gêne en rien l'exécution du script.
@@ -86,7 +86,7 @@ instruction_2;     instruction_3;
 
 
 
-#####Indentation et présentation
+####Indentation et présentation
 
 L'indentation, en informatique, est une façon de structurer du code pour le rendre plus lisible.
 
@@ -141,14 +141,14 @@ Gardez à l'esprit que votre code doit être propre, même si vous êtes le seul
 
 
 
-#####Les commentaires
+####Les commentaires
 
 Les commentaires sont des annotations faites par le développeur pour expliquer le fonctionnement d'un script, d'une instruction ou même d'un groupe d'instructions. Les commentaires ne gênent pas l'exécution d'un script.
 
 Il existe deux types de commentaires : les commentaires, et les commentaires multilignes.
 
 
-######Commentaires
+#####Commentaires
 
 Ils servent à commenter une instruction. Un tel commentaire commence par deux slashs :
 
@@ -169,7 +169,7 @@ instruction_2;
 ```
 
 
-######Commentaires multilignes
+#####Commentaires multilignes
 
 Ce type de commentaires permet les retours à la ligne. Un commentaire multiligne commence par /* et se termine par */ :
 
