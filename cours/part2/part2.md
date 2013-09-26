@@ -11,9 +11,11 @@ Tout d'abord, qu'est-ce que « déclarer une variable » veut dire ?
 Il s'agit tout simplement de lui réserver un espace de stockage en mémoire, rien de plus. Une fois la variable déclarée, vous pouvez commencer à y stocker des données sans problème.
 
 Pour déclarer une variable, il vous faut d'abord lui trouver un nom. Il est important de préciser que le nom d'une variable ne peut contenir que des caractères alphanumériques, autrement dit les lettres de A à Z et les chiffres de 0 à 9 ; l'underscore (_) et le dollar ($) sont aussi acceptés.
+
 Autre chose : le nom de la variable ne peut pas commencer par un chiffre et ne peut pas être constitué uniquement de mots-clés utilisés par le Javascript. Par exemple, vous ne pouvez pas créer une variable nommée var car vous allez constater que ce mot-clé est déjà utilisé, en revanche vous pouvez créer une variable nommée var_.
 
-Concernant les mots-clés utilisés par le Javascript, on peut les appeler « les mots réservés », tout simplement parce que vous n'avez pas le droit d'en faire usage en tant que noms de variables. 
+Concernant les mots-clés utilisés par le Javascript, on peut les appeler « les mots réservés », tout simplement parce que vous n'avez pas le droit d'en faire usage en tant que noms de variables.
+
 Pour déclarer une variable, il vous suffit d'écrire la ligne suivante :
 
 ```javascript
@@ -153,4 +155,5 @@ alert(typeof nothing); // Affiche : « undefined »
 Voilà un type de variable très important ! 
 Si l'instruction typeof vous renvoie undefined, c'est soit que votre variable est inexistante, soit qu'elle est déclarée mais ne contient rien.
 
-Mise en pratique, déclarez 3 variables de types différents (int/string/boolean) et à l'aide de la fonction ```console.log()``` affichez leur contenu et leur type.
+####Mise en pratique 
+Déclarez 3 variables de types différents (int/string/boolean) et à l'aide de la fonction ```console.log()``` affichez leur contenu et leur type.
