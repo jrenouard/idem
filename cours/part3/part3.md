@@ -62,7 +62,7 @@ Ils sont au nombre de trois :
 | Opérateur    |Type de logique| Utilisation  |
 | ------------- |:------:|----------------:|
 | && |  ET      | valeur1 && valeur2 |
-| ||  | OU       | valeur1 || valeur2 |
+| \|\|  | OU       | valeur1 \|\| valeur2 |
 | ! | NON      | !valeur |
 
 ####L'opérateur ET
