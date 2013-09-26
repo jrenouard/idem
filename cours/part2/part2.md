@@ -347,5 +347,7 @@ Qu'avons-nous fait ? Nous avons juste ajouté une chaîne de caractères vide en
 
 
 #### Mise en pratique
-Nous voulons récupérer les noms, prénoms, taille et poids d'un utilisateur afin de calculer son IMC (voir [la formule ici](http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle)) et d'afficher:
+Nous voulons récupérer les noms, prénoms, taille et poids d'un utilisateur afin de calculer son IMC (voir [la formule ici](http://fr.wikipedia.org/wiki/Indice_de_masse_corporelle)) et d'afficher :
+```
 "Bonjour PRENOM NOM, votre IMC est de IMC"
+```
