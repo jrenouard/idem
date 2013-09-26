@@ -360,7 +360,7 @@ function sayHello() {
 
  
 alert(sayHello()); // Ici on affiche la valeur retournée par la fonction sayHello()
-```javascript
+```
 
 Maintenant essayons d'ajouter une ligne de code après la ligne contenant notre return :
 
@@ -378,3 +378,7 @@ Comme vous pouvez le constater, notre premier alert() ne s'est pas affiché ! Ce
 Ce fonctionnement explique d'ailleurs pourquoi on ne peut pas faire plusieurs renvois de valeurs pour une même fonction : si on écrit deux return à la suite, seul le premier sera exécuté puisque le premier return aura déjà mis un terme à l'exécution de la fonction.
 
 Voilà tout pour les valeurs de retour. Leur utilisation est bien plus simple que pour les arguments mais reste vaste quand même, je vous conseille de vous entraîner à vous en servir car elles sont très utiles !
+
+
+###Mise en pratique
+Ecrire une fonction pour convertir des degrés Celsius en Fahrenheit
