@@ -21,6 +21,9 @@ C'est important, car la finalité des scripts client-side et server-side n'est p
 
 Javascript est un langage dit client-side, c'est à dire interprété par le client (le visiteur)
 
+
+
+
 ###Le Hello World!
 
 Comme dans tout bon tutoriel nous allons commencer par afficher le classique 'Hello World!'
@@ -40,6 +43,9 @@ console.log('Hello World!');
 Mise en pratique, à partir du [code source](part1.html) fournis, essayez les 2 méthodes.
 
 
+
+
+
 ### La syntaxe
 
 La syntaxe du Javascript n'est pas compliquée. De manière générale, les instructions doivent être séparées par un point-virgule que l'on place à la fin de chaque instruction :
@@ -49,6 +55,7 @@ instruction_1;
 instruction_2;
 instruction_3;
 ```
+
 
 ##### La compression des scripts
 
@@ -60,6 +67,8 @@ Des programmes existent pour « compresser » un code Javascript.
 Mais si vous avez oublié un seul point-virgule, votre code compressé ne fonctionnera plus, puisque les instructions ne seront pas correctement séparées. 
 
 C'est aussi une des raisons qui fait qu'il faut toujours mettre les points-virgules en fin d'instruction.
+
+
 
 #####Les espaces
 
@@ -75,7 +84,9 @@ instruction_1;
 instruction_2;     instruction_3;
 ```
 
-######Indentation et présentation
+
+
+#####Indentation et présentation
 
 L'indentation, en informatique, est une façon de structurer du code pour le rendre plus lisible.
 
@@ -128,11 +139,14 @@ Vous conviendrez que c'est tout de suite moins lisible non ?
 
 Gardez à l'esprit que votre code doit être propre, même si vous êtes le seul à y toucher : vous pouvez laisser le code de côté quelques temps et le reprendre par la suite, et là, bonne chance pour vous y retrouver.
 
-######Les commentaires
+
+
+#####Les commentaires
 
 Les commentaires sont des annotations faites par le développeur pour expliquer le fonctionnement d'un script, d'une instruction ou même d'un groupe d'instructions. Les commentaires ne gênent pas l'exécution d'un script.
 
 Il existe deux types de commentaires : les commentaires, et les commentaires multilignes.
+
 
 ######Commentaires
 
@@ -153,6 +167,7 @@ instruction_2;
 // La troisième instruction ci-dessous pose problème, je l'annule temporairement
 // instruction_3;
 ```
+
 
 ######Commentaires multilignes
 
