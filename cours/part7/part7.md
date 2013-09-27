@@ -1,1 +1,3 @@
-##Partie 7 : 
+##Partie 7
+
+Développer une calculatrice
