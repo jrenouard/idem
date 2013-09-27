@@ -21,11 +21,14 @@ function num2Letters(number) {
     } else {
  
         // Traitement des unités
- 
-        unitsOut = (units === 1 && tens > 0 && tens !== 8 ? 'et-' : '') + units2Letters[units];
+        if(units === 1 && tens > 0 && tens !== 8) {
+            unitsOut = 'et-'
+        }else{
+            unitsOut = '';
+        }
+        unitsOut += units2Letters[units];
  
         // Traitement des dizaines
- 
         if (tens === 1 && units > 0) {
  
             tensOut = units2Letters[10 + units];
@@ -33,7 +36,14 @@ function num2Letters(number) {
  
         } else if (tens === 7 || tens === 9) {
  
-            tensOut = tens2Letters[tens] +'-'+ (tens === 7 && units === 1 ? 'et-' : '') + units2Letters[10 + units];
+            tensOut = tens2Letters[tens] +'-';
+            if(tens === 7 && units === 1) {
+                tensOut += 'et-';
+            }else{
+                tensOut += '';
+            }
+            tensOut += units2Letters[10 + units];
+
             unitsOut = '';
  
         } else {
@@ -42,15 +52,37 @@ function num2Letters(number) {
  
         }
  
-        tensOut += (units === 0 && tens === 8 ? 's' : '');
+        if(units === 0 && tens === 8) {
+            tensOut += 's';
+        }
  
         // Traitement des centaines
- 
-        hundredsOut = (hundreds > 1 ? units2Letters[hundreds] + '-' : '') + (hundreds > 0 ? 'cent' : '') + (hundreds > 1 && tens == 0 && units == 0 ? 's' : '');
+        if(hundreds > 1) {
+            hundredsOut = units2Letters[hundreds] + '-';
+        }else{
+            hundredsOut = '';
+        }
+
+        if(hundreds > 0) {
+            hundredsOut += 'cent';
+        }
+
+        if(hundreds > 1 && tens == 0 && units == 0) {
+            hundredsOut += 's';
+        }
  
         // Retour du total
- 
-        return hundredsOut + (hundredsOut && tensOut ? '-': '') + tensOut + (hundredsOut && unitsOut || tensOut && unitsOut ? '-': '') + unitsOut;
+        var finalStr = hundredsOut;
+        if(hundredsOut && tensOut) {
+            finalStr += '-';
+        }
+        finalStr += tensOut;
+
+        if (hundredsOut && unitsOut || tensOut && unitsOut) {
+            finalStr += '-';
+        }
+        finalStr += unitsOut;
+        return  finalStr;
     }
  
 }
