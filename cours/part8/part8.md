@@ -77,21 +77,12 @@ text.substring(2,4) //returns "ce"
 
 #####toLowerCase
 Retourne la valeur de chaîne appelant convertis en minuscules.
-```javascript
-
-```
 
 #####toUpperCase
 Retourne la valeur de chaîne appelant convertie en majuscules.
-```javascript
-
-```
 
 #####trim
 Coupe les espaces du début et de fin de la chaîne.
-```javascript
-
-```
 
 ###Mise en pratique
 
