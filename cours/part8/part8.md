@@ -51,13 +51,6 @@ Utilisé pour trouver une correspondance entre une expression régulière et une
 #####search
 Exécute la recherche pour la correspondance entre une expression régulière et une chaîne spécifiée.
 
-#####slice
-Extrait une section de la chaîne et retourne une nouvelle chaîne.
-```javascript
-var text="excellent"
-text.slice(0,4) //returns "exce"
-text.slice(2,4) //returns "ce"
-```
 
 #####split
 Divise un objet String en un tableau de chaînes en séparant la chaîne en sous-chaînes.
@@ -100,3 +93,15 @@ Coupe les espaces du début et de fin de la chaîne.
 
 ```
 
+###Mise en pratique
+
+####Exercice 1: 
+En utilisant les méthodes vues ci-dessus, ecrire une fonction de validation d'un champ email.
+Les conditions de validations sont :
+* Présence d'un @
+* Présence d'au moins un .
+* L'@ ne doit pas être le premier caractère
+* Le dernier point doit être après l'@ et au minimum 2 caractères avant la fin
+
+####Exercice 2: 
+Compter le nombre de mots présents dans une textarea
