@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Age</title>
+<script>
+function age(date) {
+    var tmp = date.split("/");
+    var now = new Date();
+    var bd  = new Date(tmp[2], tmp[1], tmp[0]);
+    console.log(bd+" "+now);
+    var dif =  now - bd;
+    var yourage = dif / 31557600000;
+    console.log(yourage);
+    alert(Math.round(yourage*100)/100);
+}
+
+</script>
+</head>
+<body>
+Votre date de naissance au format jj/mm/aaaa<br/>
+<input type="text" id="age" /> <input type="submit" onclick="age(document.getElementById('age').value);" />
+</body>
+</html>

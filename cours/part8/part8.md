@@ -96,3 +96,107 @@ Les conditions de validations sont :
 
 ####Exercice 2: 
 Compter le nombre de mots présents dans une textarea
+
+
+###L'Objet date
+
+####Syntaxe
+
+```javascript
+var today = new Date();
+var birthday = new Date("December 17, 1995 03:24:00");
+var birthday = new Date(1995,11,17);
+var birthday = new Date(1995,11,17,3,24,0);
+```
+
+####Méthodes
+
+
+#####now()
+Retourne la date actuelle exprimée en millisecondes depuis le 1 Janvier 1970
+
+#####getDate() 
+Retourne le jour du mois
+
+#####getDay() 
+Retourne le jour de la semaine
+
+#####getFullYear() 
+Retourne l'année
+
+#####getHours() 
+Retourne l'heure
+
+#####getMilliseconds() 
+Retourne les millisecondes de la date
+
+#####getMinutes() 
+Retourne les minutes
+
+#####getMonth() 
+Retourne le numéro du mois.
+
+#####getSeconds() 
+Retourne les secondes
+
+#####getTime() 
+Retourne la date en millisecondes
+
+#####getTimezoneOffset() 
+Retourne le décalage horaire en minutes
+
+#####getYear() 
+Retourne l'année sur 2 chiffres
+
+#####setDate() 
+Affecte la date du mois
+
+#####setFullYear() 
+Affecte l'année de la date
+
+#####setHours() 
+Affecte les heures
+
+#####setMilliseconds() 
+Affecte les millisecondes de la date
+
+#####setMinutes() 
+Affecte les minutes
+
+#####setMonth() 
+Affecte le mois de la date
+
+#####setSeconds() 
+Affecte les secondes
+
+#####setTime() 
+Affecte la date en millisecondes
+
+#####setYear() 
+Affecte l'année de la date
+
+#####toString()
+Retourne la date en chaine de caractères
+
+#####toGMTString() 
+Retourne la date à l'heure GMT
+
+#####toLocaleString() 
+Retourne la date au format par défaut
+
+####Mise en pratique
+####Exercice 1 :
+L'utilisateur saisie sa date de naissance dans un champ text, lui renvoyer son age.
+
+
+####Exercice 2 :
+Validation d'un formulaire complet.
+Cas d'un formulaire d'inscription contenant les champs suivants :
+* login (au moins 4 caractères)
+* email
+* mot de passe (au moins 8 caractères avec au moins un chiffre)
+* confirmation du mot de passe
+* 3 selects (jour/mois/année) pour date de naissance, on vérifie que l'utilisateur est majeur
+* sexe (H/F) (obligatoire)
+* select Pays (US/EN/FR/ES) (obligatoire)
+* checkbox "J'ai lu et j'accepte les CGV" -> il est obligatoire de checker cette box pour s'inscrire
