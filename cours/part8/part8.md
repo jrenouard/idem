@@ -97,6 +97,9 @@ Les conditions de validations sont :
 ####Exercice 2: 
 Compter le nombre de mots présents dans une textarea
 
+####Exercice 3:
+Détecter le plus long palindrome dans une chaine
+
 
 ###L'Objet date
 
