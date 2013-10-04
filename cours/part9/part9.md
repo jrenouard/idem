@@ -164,3 +164,12 @@ Le tableau suivant décrit les méthodes de l'objet RegExp :
 |Expression.compile("chaine"); |   Permet de redéfinir une nouvelle expression régulière. |
 | Expression.exec("chaine");  | Effectue une recherche sur la chaîne de caractère avec l'expression régulière définie. Cette méthode retourne un tableau contenant les occurences trouvées. |
 | Expression.test("chaine"); |  Teste une chaîne de caractère avec l'expression régulière. Cette méthode retourne True si la recherche est fructueuse, false dans le cas contraire. |
+
+
+####Mise en pratique
+#####Exercice 1 
+Sur la base du formulaire précedent, valider les champs suivants à l'aide d'une expression régulière :
+* login
+* email
+* password
+* telephone (de la forme +33675757575)
