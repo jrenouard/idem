@@ -5,7 +5,7 @@
 function age(date) {
     var tmp = date.split("/");
     var now = new Date();
-    var bd  = new Date(tmp[2], tmp[1], tmp[0]);
+    var bd  = new Date(tmp[2], tmp[1]-1, tmp[0]);
     console.log(bd+" "+now);
     var dif =  now - bd;
     var yourage = dif / 31557600000;
