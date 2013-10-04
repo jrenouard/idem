@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function validateForm() {
+    // validation login
+    // var login = document.getElementById('login').value;
+    // if(login.length < 4) {
+    //     alert("invalid login");
+    //     return false;        
+    // }
+
+    // // validation email
+    // var x = document.forms["myForm"]["email"].value;
+    // var atpos = x.indexOf("@");
+    // var dotpos = x.lastIndexOf(".");
+    // if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+    //     alert("Not a valid e-mail address");
+    //     return false;
+    // }
+
+    // validation mot de passe
+    var mdp = document.getElementById('password').value;
+    var confmdp = document.getElementById('conf_pass').value;
+    var tmp = mdp.split("");
+    var flagnum = false;
+    for (var i = tmp.length - 1; i >= 0; i--) {
+        console.log(tmp[i]);
+        if(!isNaN(tmp[i])) {
+            flagnum = true;
+        }
+    }
+    if(!flagnum) {
+        alert("Password should contain at least one number");
+    }
+
+
+    alert("ok");
+}
+</script>
+</head>
+
+<body>
+<form name="myForm" action="" onsubmit="return validateForm();" method="post">
+Login: <input type="text" name="login" id="login"/><br/>
+Email: <input type="text" name="email" id="email"/><br/>
+Mot de passe: <input type="password" name="password" id="password"/><br/>
+Confirmation mot de passe: <input type="password" name="conf_pass" id="conf_pass"><br/>
+Age: 
+<select name="day" id="day">
+    <option>Jour</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+<select name="month" id="month">
+    <option>mois</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+<select name="year" id="year">
+    <option>année</option>
+    <option value="1982">1982</option>
+    <option value="1983">1983</option>
+    <option value="1984">1984</option>
+    <option value="1985">1985</option>
+    <option value="1986">1986</option>
+</select><br/>
+Sexe:
+<input type="radio" name="sex" value="H" id="sexH" checked="checked" /> 
+<input type="radio" name="sex" value="F" id="sexF" /> <br/>
+Téléphone :
+<input type="text" name="tel" id="tel" /><br/>
+
+Pays :
+<select name="pays" id="pays">
+    <option value="">Pays</option>
+    <option value="US">Etats-Unis</option>
+    <option value="FR">France</option>
+    <option value="ES">Espagne</option>
+</select>
+<br/>
+J'ai lu et j'accepte les CGV :
+<input type="checkbox" id="cgv" name="cgv"  />
+<br/>
+<input type="submit" value="Submit">
+</form>
+</body>
+
+</html>
