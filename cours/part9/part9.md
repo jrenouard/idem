@@ -88,15 +88,9 @@ La barre verticale | se comporte en tant qu'opérateur OU
 ```(un|le) chien```: chaîne qui correspond à
  ```un chien``` ou ```le chien```
 
-idem\.((net)|(com)|(org)) :
-chaîne qui correspond à  :
-```idem.net```
-```idem.com```
-```idem.org```
-
 ####Caractère quelconque
 
-Le point (.) indique n'importe une occurence de n'importe quel caractère. 
+Le point (.) indique une occurence de n'importe quel caractère. 
 
 ```^.{3}$```: chaîne qui contient 3 caractères
 ```.*```: Tous les caractères
