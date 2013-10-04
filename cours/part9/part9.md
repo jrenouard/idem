@@ -146,10 +146,8 @@ Voici un tableau récapitulatif des caractères spéciaux utilisés dans les exp
 |. |   Le caractère point représente un caractère quelconque. |
 |* |   Le caractère astérisque indique un nombre d'occurences indéterminé (y compris aucune) de l'élément le précédant.|
 |+ |   Le caractère plus indique une ou plusieurs occurences de l'élément le précédant. |
-|? |  Le caractère "point d'interrogation" indique une occurence éventuelle (0 ou 1) de l'élément le précédant.
-lard>cochon) |
-|^ | Placé en début d'expression il signifie "chaîne commençant par .. " 
-Utilisé entre crochet, immédiatement après le crochet ouvrant, il signifie "ne contenant pas les caractères suivants... |
+|? |  Le caractère "point d'interrogation" indique une occurence éventuelle (0 ou 1) de l'élément le précédant. lard>cochon) |
+|^ | Placé en début d'expression il signifie "chaîne commençant par .. " Utilisé entre crochet, immédiatement après le crochet ouvrant, il signifie "ne contenant pas les caractères suivants... |
 |[abc] |   Permet de rechercher les caractères compris entre les crochets. |
 |[^abc] |  Permet de rechercher tous les caractères sauf ceux compris entre les crochets. |
 | $ |   Placé en fin d'expression il signifie "chaîne finissant par ... "|
