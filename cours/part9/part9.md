@@ -7,7 +7,7 @@
 La création d'un objet RegExp se crée à l'aide d'une simple expression comme suit : 
 
 ```
-Expression = /motif/drapeau
+Expression = /pattern/flag
 ```
 
 
@@ -16,12 +16,12 @@ Expression = /motif/drapeau
 Il est également possible de créer un tel objet de manière plus classique à l'aide de son constructeur : 
 
 ```
-Expression = new RegExp("motif","drapeau")
+Expression = new RegExp("pattern","flag")
 ```
 
 
 
-Le motif représente l'expression régulière en elle-même tandis que le drapeau (optionnel) permet de préciser le comportement de l'expression régulière :
+Le pattern représente l'expression régulière en elle-même tandis que le flag (optionnel) permet de préciser le comportement de l'expression régulière :
 
 ```
 g 
@@ -76,7 +76,7 @@ Il est à noter que le premier nombre de la limite est obligatoire ("{0,2}", mai
 
 ####Parenthèses capturantes
 
-Les parenthèses ( ) permettent de représenter une séquence de caractères et de capturer le résultat. Les occurences correspondant au motif entre parenthèses sont accessibles via la méthode exec() de l'objet RegExp ou bien les méthodes search(), match() et replace() de l'objet String. 
+Les parenthèses ( ) permettent de représenter une séquence de caractères et de capturer le résultat. Les occurences correspondant au pattern entre parenthèses sont accessibles via la méthode exec() de l'objet RegExp ou bien les méthodes search(), match() et replace() de l'objet String. 
 
 ```a(bc)+```: chaîne qui contient ```a``` suivie de au moins
 une occurence de la chaîne ```bc```
@@ -146,7 +146,7 @@ Voici un tableau récapitulatif des caractères spéciaux utilisés dans les exp
 |. |   Le caractère point représente un caractère quelconque. |
 |* |   Le caractère astérisque indique un nombre d'occurences indéterminé (y compris aucune) de l'élément le précédant.|
 |+ |   Le caractère plus indique une ou plusieurs occurences de l'élément le précédant. |
-|? |  Le caractère "point d'interrogation" indique une occurence éventuelle (0 ou 1) de l'élément le précédant. lard>cochon) |
+|? |  Le caractère "point d'interrogation" indique une occurence éventuelle (0 ou 1) de l'élément le précédant. |
 |^ | Placé en début d'expression il signifie "chaîne commençant par .. " Utilisé entre crochet, immédiatement après le crochet ouvrant, il signifie "ne contenant pas les caractères suivants... |
 |[abc] |   Permet de rechercher les caractères compris entre les crochets. |
 |[^abc] |  Permet de rechercher tous les caractères sauf ceux compris entre les crochets. |
