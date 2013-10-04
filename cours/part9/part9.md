@@ -17,7 +17,7 @@ Il est également possible de créer un tel objet de manière plus classique à 
 
 ```
 Expression = new RegExp("motif","drapeau")
-``
+```
 
 
 
