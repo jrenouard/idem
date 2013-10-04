@@ -2,14 +2,18 @@
 
 ###JSON: JavaScript Object Notation
 
-```javascript
+exemple de notation JSON :
+
+```
 <script>
     var data = { "firstName" : "Homer" };
     alert(data.firstName);
 </script>
 ```
 
-```javascript
+Le JSON permet aussi de stocker des tableaux :
+
+```
 <div id="placeholder"></div>
 <script>
 var data={"users":[
@@ -29,7 +33,9 @@ document.getElementById("placeholder").innerHTML=data.users[0].firstName + " " +
 </script>
 ```
 
-```javascript
+on peut parcourir notre objet afin d'ecrire dans la page html
+
+```
 <div id="placeholder"></div>
 <script>
     var data = { "users":[
@@ -114,6 +120,13 @@ var r = function() {
 
 r();
 ```
+ou si l'on veut que la fonction s'execute directement :
 
-On évite ainsi de poluer l'espace de nom globale avec des noms de fonctions inutiles.
+```javascript
+var r = function() { 
+    alert('Bonjour'); 
+}();
+```
+
+On évite ainsi de poluer l'espace de nom global avec des noms de fonctions inutiles.
 
