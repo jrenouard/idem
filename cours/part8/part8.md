@@ -201,5 +201,6 @@ Cas d'un formulaire d'inscription contenant les champs suivants :
 * confirmation du mot de passe
 * 3 selects (jour/mois/année) pour date de naissance, on vérifie que l'utilisateur est majeur
 * sexe (H/F) (obligatoire)
+* téléphone (obligatoire et numerique)
 * select Pays (US/EN/FR/ES) (obligatoire)
 * checkbox "J'ai lu et j'accepte les CGV" -> il est obligatoire de checker cette box pour s'inscrire
