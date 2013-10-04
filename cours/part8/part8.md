@@ -98,7 +98,7 @@ Les conditions de validations sont :
 Compter le nombre de mots présents dans une textarea
 
 ####Exercice 3:
-Détecter le plus long palindrome dans une chaine
+Détecter le plus long palindrome dans une chaine (ou texte [exemple ici](smalltext.js))
 
 
 ###L'Objet date
