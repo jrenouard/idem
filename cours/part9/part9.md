@@ -88,7 +88,7 @@ La barre verticale | se comporte en tant qu'opérateur OU
 ```(un|le) chien```: chaîne qui correspond à
  ```un chien``` ou ```le chien```
 
-```idem\\.((net)|(com)|(org))```:
+idem\.((net)|(com)|(org)) :
 chaîne qui correspond à  :
 ```idem.net```
 ```idem.com```
