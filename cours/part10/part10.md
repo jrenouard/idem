@@ -4,7 +4,7 @@
 
 exemple de notation JSON :
 
-```
+```html
 <script>
     var data = { "firstName" : "Homer" };
     alert(data.firstName);
@@ -13,7 +13,7 @@ exemple de notation JSON :
 
 Le JSON permet aussi de stocker des tableaux :
 
-```
+```html
 <div id="placeholder"></div>
 <script>
 var data={"users":[
@@ -35,7 +35,7 @@ document.getElementById("placeholder").innerHTML=data.users[0].firstName + " " +
 
 on peut parcourir notre objet afin d'ecrire dans la page html
 
-```
+```html
 <div id="placeholder"></div>
 <script>
     var data = { "users":[
@@ -72,7 +72,7 @@ on peut parcourir notre objet afin d'ecrire dans la page html
 
 ####Mise en pratique
 A partir du code suivant :
-```
+```html
 <!DOCTYPE html>
 <html>
 <body>
