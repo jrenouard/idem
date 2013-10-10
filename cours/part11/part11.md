@@ -215,11 +215,11 @@ Ici, je me contente d'insérer le résultat dans la page car je sais que le serv
 ####Mise en pratique
 
 ##### Exercice 1
-A partir d'un formulaire avec un champ text, récupérer la page wikipedia correspondante en ajax et l'afficher. 
+A partir d'un formulaire avec un champ texte, récupérer la page wikipedia correspondante en ajax et l'afficher. 
 
 ##### Exercice 2
 A partir du formulaire d'inscription des exercices précédents :
-* Ajouter 2 select, Région et Ville qui sont remplis en ajax en fonction du choix du Pays -> Région. Vous pouvez utiliser les tables suivantes [geo.sql.zip](http://dev.comelse.com/geo.sql.zip)
+* Ajouter 2 select, Région et Ville qui seront remplis en ajax en fonction du choix du Pays puis de la Région. Vous pouvez utiliser les tables suivantes [geo.sql.zip](http://dev.comelse.com/geo.sql.zip)
 * Insérer les informations utilisateur dans une table MySql en ajax.
 * Avant l'INSERT on vérifiera la présence de l'email dans la table afin de renvoyer une erreur si l'email est déjà présent.
 
