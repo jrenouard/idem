@@ -9,7 +9,7 @@ La fonction jQuery.ajax requière plusieurs paramètres (dans un objet JSON) pou
 ```javascript
 $(document).ready(function() {
 
-  jQuery.ajax({
+  $.ajax({
     // Mes paramètres ici
   });
 
@@ -27,7 +27,7 @@ Commençons par les paramètres essentiels, sans qui la fonction n'aurait aucun 
 Nous pouvons maintenant passer à nos paramètres. Le type de requête est par défaut à GET. Si c'est ce type de requête que vous souhaitez effectuer, vous n'avez donc pas besoin de le préciser.
 
 ```javascript
-jQuery.ajax({
+$.ajax({
   type: 'GET', // Le type de ma requete
   url: 'http://www.monsite.com/serveur.php', // L'url vers laquelle la requete sera envoyee
   data: {
@@ -82,9 +82,9 @@ Maintenant, sur notre page HTML, nous avons un formulaire contenant un champ pou
 <fieldset>
   <legend>Entrez vos informations</legend>
   <div id="classic-use-response">
-    <? if (isset($_SESSION['username'])) : ?>
+    <?php if (isset($_SESSION['username'])) : ?>
       <p style="color:orange;"><strong>Le nom d'utilisateur enregistré en session est <i><?= $_SESSION['username']; ?></i>.</strong></p>
-    <? endif; ?>
+    <?php endif; ?>
   </div>
 
   <div>
@@ -100,7 +100,7 @@ Maintenant, sur notre page HTML, nous avons un formulaire contenant un champ pou
 A présent, nous pouvons nous consacrer sur la partie intéressante à savoir le code Javascript.
 
 ```javascript
-var loader = "assets/images/loader.gif";
+var loader = "loader.gif";
 
 $('#classic-use-button').click(function() {
 
@@ -109,29 +109,29 @@ $('#classic-use-button').click(function() {
 
   // Si le nom d'utilisateur est vide on signale l'erreur
   if (username.length < 1) {
-    $('#classic-use-response').html('').html('<div class="error">Le nom d\'utilisateur ne doit pas être vide.</div>');
+    $('#classic-use-response').html('<div class="error">Le nom d\'utilisateur ne doit pas être vide.</div>');
     // Sortie de la fonction, on ne va pas plus loin
     return false;
   }
 
   // Si on arrive ici c'est que le nom d'utilisateur est fourni
   // On va donc signaler que nous sommes en train de faire quelque chose à l'aide d'une petite image
-  $('#classic-use-response').html('').html('<img src="' + loader + '" alt="#" />&nbsp;Chargement...');
+  $('#classic-use-response').html('<img src="' + loader + '" alt="#" />&nbsp;Chargement...');
 
   // Maintenant nous pouvons commencer l'envoi des donnees
   $.ajax({
-    url: 'register_username.php',
+    url: 'username.php',
     type: 'POST',
     data: {
       username: username
     },
     error: function(jqXHR, textStatus, errorThrown) {
       // En cas d'erreur, on le signale
-      $('#classic-use-response').html('').html('<div class="error">Une erreur est survenue lors de la requête.</div>');
+      $('#classic-use-response').html('<div class="error">Une erreur est survenue lors de la requête.</div>');
     },
     success: function(data, textStatus, jqXHR) {
       // Succes. On affiche un message de confirmation
-      $('#classic-use-response').html('').html('<div class="success">Nom d\'utilisateur enregistré en session. Vous pouvez <a href="' + window.location + '">rechargez la page</a> pour le voir.</div>');
+      $('#classic-use-response').html('<div class="success">Nom d\'utilisateur enregistré en session. Vous pouvez <a href="' + window.location + '">rechargez la page</a> pour le voir.</div>');
     }
   });
 
@@ -143,6 +143,9 @@ Ma fonction ajax est liée à un évènement, le click sur le bouton ayant l'id 
 Nous insérons ensuite dans la page web une image ainsi qu'un petit mot indiquant que la requête est en cours de traitement. Nous envoyons ensuite les données vers le fichier PHP à l'aide d'une requête de type POST.
 
 Enfin, lors de la réponse du serveur, que ce soit un echec ou un succès, nous remplaçons l'image de chargement par un message.
+
+####Mise en pratique
+Afficher le nom d'utilisateur sans recharger la page.
 
 
 ####Récupérer du JSON avec jQuery.getJSON() Avec parsage automatique.
@@ -165,7 +168,7 @@ $.getJSON('get_json.php', function(data) {
   output += "</ul>"
 
   // Enfin on insere la liste dans la page
-  $('#json-use-response').html('').html(output);
+  $('#json-use-response').html(output);
 
 });
 ```
@@ -193,7 +196,7 @@ De la même manière que la fonction précédente, jQuery.get va aller chercher 
 $.get('get_comic.php', function(data) {
 
   // On recupere du HTML donc on l'insere "as-is" dans la page
-  $('#get-use-response').html('').html(data);
+  $('#get-use-response').html(data);
 
 });
 ```
@@ -202,8 +205,19 @@ Le fichier PHP répondant à la requête :
 
 ```php
 <?php
-echo '<div><img src="internet-cat" alt="Internet Cat" /><p>The Oatmeal</p></div>';
+echo '<div><img src="http://s3.amazonaws.com/theoatmeal-img/comics/cat_vs_internet/13.png" alt="Internet Cat" /><p>The Oatmeal</p></div>';
 ?>
 ``` 
 
 Ici, je me contente d'insérer le résultat dans la page car je sais que le serveur va me renvoyer du code HTML.
+
+
+####Mise en pratique
+
+##### Exercice 1
+A partir d'un formulaire avec un champ text, récupérer la page wikipedia correspondante en ajax et l'afficher. 
+
+##### Exercice 2
+A partir du formulaire d'inscription des exercices précédents, insérer les informations utilisateur dans une table MySql en ajax.
+Avant l'INSERT on vérifiera la présence de l'email dans la table afin de renvoyer une erreur si l'email est déjà présent.
+
