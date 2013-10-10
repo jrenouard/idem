@@ -128,5 +128,5 @@ var r = function() {
 }();
 ```
 
-On évite ainsi de poluer l'espace de nom global avec des noms de fonctions inutiles.
+On évite ainsi de poluer l'espace de nom global.
 
