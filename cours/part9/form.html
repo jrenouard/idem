@@ -4,9 +4,11 @@
 <script>
 function validateForm() {
     // validation login
-    var regex_login = /\w{4,}/gi;
+    var regex_login = /^\w{4,60}$/gi;
+    // var regex_login = /^[a-z0-9]{3,5}$/gi;
     var login = document.getElementById('login').value;
     var val_login = regex_login.test(login);
+    console.log(val_login);
     if(!val_login) {
         alert("invalid login");
         return false;        
@@ -23,7 +25,7 @@ function validateForm() {
 
     // validation mot de passe
     var mdp = document.getElementById('password').value;
-    var regex_pass = /[a-zA-Z].*\d|\d.*[a-zA-Z]{8,}/;
+    var regex_pass = /[a-zA-Z]{7,}.*\d|\d.*[a-zA-Z]{7,}/;
     var val_mdp = regex_pass.test(mdp);
     var confmdp = document.getElementById('conf_pass').value;
     if(!val_mdp) {
