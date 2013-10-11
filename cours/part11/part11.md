@@ -222,4 +222,5 @@ A partir du formulaire d'inscription des exercices précédents :
 * Ajouter 2 select, Région et Ville qui seront remplis en ajax en fonction du choix du Pays puis de la Région. Vous pouvez utiliser les tables suivantes [geo.sql.zip](http://dev.comelse.com/geo.sql.zip)
 * Insérer les informations utilisateur dans une table MySql en ajax.
 * Avant l'INSERT on vérifiera la présence de l'email dans la table afin de renvoyer une erreur si l'email est déjà présent.
+P.S: Pas de stockage des mdp en clair SVP, Merci ;) Utilisez une fonction md5() ou sha12()
 
