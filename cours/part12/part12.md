@@ -21,7 +21,10 @@ Indices :
 - Valider les mouvements côté serveur, l'inteface utilisateur doit gérer les messages d'erreur des mouvements invalides dans des réponses ajax.
 
 
-###Allez plus loin
+
+---------------------------------
+
+##Et après ?
 
 ####Javascript a beaucoup evolué :
 
