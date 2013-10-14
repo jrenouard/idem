@@ -31,7 +31,7 @@ Indices :
 
 #####Côté backend
 
-_NodeJS_ :
+* NodeJS :
 
 http://nodejs.org/
 
@@ -47,7 +47,7 @@ https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-
 http://expressjs.com/ -> Framework MVC pour NodeJS
 
 
-_Coffescript_ :
+* Coffescript :
 
 JavaScript en plus beau.
 http://coffeescript.org/
