@@ -31,22 +31,30 @@ Indices :
 
 #####Côté backend
 
-NodeJs
+NodeJs :
+
 http://nodejs.org/
+
 http://nodejs.org/industry/
+
 https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-Node
+
 http://expressjs.com/
 
+
 Coffescript
+
 http://coffeescript.org/
 
 
 #####Côté frontend
 
 Pour étendre le HTML AngularJS :
+
 http://angularjs.org/
 
 Le HTML5 nous permet de faire des choses funny :
+
 http://slides.html5rocks.com/#landing-slide
 
 
