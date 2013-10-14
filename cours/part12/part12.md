@@ -31,20 +31,28 @@ Indices :
 
 #####Côté backend
 
-NodeJs :
+_NodeJS_ :
 
 http://nodejs.org/
 
-http://nodejs.org/industry/
+Nodejs est un logiciel permettant d'exécuter du JavaScript côté serveur, contrairement à ce qu'on a l'habitude de voir avec le javascript côté client.
 
-https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-Node
+L'avantage d'utiliser Nodejs est que javascript permet l'éxécution de tâches asynchrones, ce qui peut être pratique dans certaines situations. C'est de plus en plus souvent le cas avec le « nouveau » web qui arrive (html5/css3, etc.).
+De plus, Nodejs permet de créer des applications « serveur » facilement grâce à des applications tierces qu'il prend en charge via un logiciel similaire à un gestionnaire de paquets.
 
-http://expressjs.com/
+http://nodejs.org/industry/ -> des gens qui utilisent NodeJS
+
+https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-Node -> encore plus de gens
+
+http://expressjs.com/ -> Framework MVC pour NodeJS
 
 
-Coffescript
+_Coffescript_ :
 
+JavaScript en plus beau.
 http://coffeescript.org/
+
+et http://fr.wikipedia.org/wiki/CoffeeScript voir l'exemple de l'IMC (que vous connaissez)
 
 
 #####Côté frontend
@@ -67,5 +75,11 @@ http://www.mean.io/
 ####Conclusion: Stay tuned
 
 La veille technologique et la curiosité sont les clés du métier de développeur, ne vous reposez jamais sur les technos que vous connaissez.
+
+
+
+###Merci
+
+Et merci de prendre le temps de remplir ce tout petit questionnaire https://docs.google.com/forms/d/186FL1_PIX6Xit1wlEYyvUTdUc9Jp1HXNMVLMuHlurlQ/viewform
 
 
