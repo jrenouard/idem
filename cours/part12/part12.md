@@ -65,6 +65,10 @@ Le HTML5 nous permet de faire des choses funny :
 
 http://slides.html5rocks.com/#landing-slide
 
+et même des jeux :
+
+http://browserquest.mozilla.org/
+
 
 ####MEAN stack? wtf?
 
