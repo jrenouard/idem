@@ -47,6 +47,33 @@ https://github.com/joyent/node/wiki/Projects,-Applications,-and-Companies-Using-
 http://expressjs.com/ -> Framework MVC pour NodeJS
 
 
+Nodecopter - Programmer un drone en JS
+
+http://nodecopter.com/
+
+```javascript
+/* Install Node.js and get the ar-drone module. All you need to do then is to execute the following code with node. That will make your drone take off, move around, do a flip and carefully land again. Seriously, that's all! */
+
+var arDrone = require('ar-drone');
+var client = arDrone.createClient();
+
+client.takeoff();
+
+client
+  .after(5000, function() {
+    this.clockwise(0.5);
+  })
+  .after(3000, function() {
+    this.animate('flipLeft', 15);
+  })
+  .after(1000, function() {
+    this.stop();
+    this.land();
+  });
+```
+
+
+
 * Coffescript :
 
 JavaScript en plus beau.
